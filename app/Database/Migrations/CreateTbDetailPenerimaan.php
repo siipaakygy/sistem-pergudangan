@@ -34,10 +34,13 @@ class CreateTbDetailPenerimaan extends Migration
                 'constraint' => '15,2',
                 'default'    => 0,
             ],
+            'created_at' => ['type' => 'DATETIME', 'null' => true],
+            'updated_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
+
         $this->forge->addKey('id_detail_penerimaan', true);
-        $this->forge->addForeignKey('id_penerimaan', 'tb_penerimaan', 'id_penerimaan', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('id_barang', 'tb_barang', 'id_barang', 'CASCADE', 'CASCADE');
+
+        
         $this->forge->createTable('tb_detail_penerimaan');
     }
 

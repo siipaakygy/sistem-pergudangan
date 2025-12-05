@@ -42,8 +42,12 @@ class CreateTbPenerimaan extends Migration
             'created_at' => ['type' => 'DATETIME', 'null' => true],
             'updated_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
+
         $this->forge->addKey('id_penerimaan', true);
-        $this->forge->addForeignKey('id_user', 'tb_user', 'id_user', 'CASCADE', 'CASCADE');
+
+        // FK SUDAH DIHAPUS TOTAL SESUAI ARAHAN PEMBIMBING
+        // $this->forge->addForeignKey('id_user', 'tb_user', 'id_user', 'CASCADE', 'CASCADE');
+
         $this->forge->createTable('tb_penerimaan');
     }
 

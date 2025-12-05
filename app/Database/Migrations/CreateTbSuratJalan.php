@@ -42,8 +42,10 @@ class CreateTbSuratJalan extends Migration
             'created_at' => ['type' => 'DATETIME', 'null' => true],
             'updated_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
+
         $this->forge->addKey('id_surat_jalan', true);
-        $this->forge->addForeignKey('id_user', 'tb_user', 'id_user');
+
+      
         $this->forge->createTable('tb_surat_jalan');
     }
 

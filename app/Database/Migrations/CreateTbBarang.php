@@ -46,9 +46,9 @@ class CreateTbBarang extends Migration
             'created_at' => ['type' => 'DATETIME', 'null' => true],
             'updated_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
+
         $this->forge->addKey('id_barang', true);
-        $this->forge->addForeignKey('id_kategori', 'tb_kategori', 'id_kategori', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('id_gudang', 'tb_gudang', 'id_gudang', 'CASCADE', 'CASCADE');
+
         $this->forge->createTable('tb_barang');
     }
 

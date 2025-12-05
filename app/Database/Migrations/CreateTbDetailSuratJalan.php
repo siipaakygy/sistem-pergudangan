@@ -29,10 +29,13 @@ class CreateTbDetailSuratJalan extends Migration
                 'type' => 'INT',
                 'constraint' => 11,
             ],
+            'created_at' => ['type' => 'DATETIME', 'null' => true],
+            'updated_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
+
         $this->forge->addKey('id_detail_sj', true);
-        $this->forge->addForeignKey('id_surat_jalan', 'tb_surat_jalan', 'id_surat_jalan', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('id_barang', 'tb_barang', 'id_barang', 'CASCADE', 'CASCADE');
+
+        
         $this->forge->createTable('tb_detail_surat_jalan');
     }
 
